@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSUP - Community Oriented Substance Use Programme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo-container">
+            <span class="logo-main">COSUP</span>
+            <span class="logo-sub">COMMUNITY ORIENTED SUBSTANCE USE PROGRAMME</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+            <span></span>
+        </button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="find-a-site.html">Find a Site</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <div class="mobile-menu-items">
+                <button class="mode-toggle" aria-label="Toggle light/dark mode">
+                    <span class="toggle-icon"></span>
+                </button>
+                <a href="#" class="btn-app">Get an App</a>
+                <a href="tel:0800611197" class="hopeline-link">
+                    <img src="images/hopeline.png" class="hopeline-image">
+                </a>
+            </div>
+        </nav>
+        
+        <div class="nav-actions">
+          <button class="mode-toggle" aria-label="Toggle light/dark mode">
+            <span class="toggle-icon"></span>
+          </button>
+          <a href="#" class="btn-app">Get an App</a>
+          <a href="tel:0800611197" >
+            <img src="images/hopeline.png" class="hopeline-image">
+          </a>
+        </div>
+    </header>
+<section class="hero">
+    <div class="hero-left">
+        <h1>Contact COSUP</h1>
+        <p>We’re here to help. Whether you have questions about our services, want to get involved, 
+            or just want to say hello — we’d love to hear from you.</p>
+            <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> <a href="mailto:info@cosup.org.za">info@cosup.org.za</a></p>
+            <p><strong>Phone:</strong> <a href="tel:0123456789">012 345 6789</a></p>
+        </div>
+    </div>
+    <div class="hero-right">
+
+        <form id="contactForm" class="contact-form" novalidate>
+            <h3>Send us a message</h3>
+            <div class="field-row">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field-row">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+            <div class="field-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <div class="field-row checkbox-row">
+                <label><input type="checkbox" id="consent" required> I consent to COSUP contacting me about my message.</label>
+            </div>
+            <div class="field-row">
+                <button type="submit" class="btn-primary">Send message</button>
+            </div>
+            <div id="contactSuccess" class="contact-success" role="status" aria-live="polite" hidden>Thanks — your message has been sent.</div>
+        </form>
+</section>
+    
+        
+
+   
+    <footer>
+        <div class="footer-brand">
+            <div class="logo-text" style="color: white;">COSUP</div>
+            <p>Community Oriented Substance Use Programme. Serving Tshwane since 2015 across 16 sites. A partnership between the City of Tshwane and the University of Pretoria.</p>
+        </div>
+        <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Screening and Brief Interventions</a></li>
+                <li><a href="#">Medical Examinations and Health Screening</a></li>
+                <li><a href="#">Conselling Services</a></li>
+                <li><a href="#">Needle Exchange Programme</a></li>
+                <li><a href="#">Opioid Substitution Therapy </a></li>
+                <li><a href="#">HIV  Testing and TB Screening</a></li>
+                <li><a href="#">Social Services</a></li>
+                <li><a href="#">Skills Development</a></li>
+                <li><a href="#">Post-rehabilitation Support Services</a></li>
+
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Organisation</h4>
+            <ul>
+                <li><a href="#">About COSUP</a></li>
+                <li><a href="#">Our Partners</a></li>
+                <li><a href="#">Find a Site</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Get Help</h4>
+            <ul>
+                <li><a href="tel:0800611197">Hopeline: 0800 611 197</a></li>
+                <li><a href="https://wa.me/27800611197" class="social-link whatsapp-link" title="Message us on WhatsApp"><svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.946 1.488c-1.54.887-2.802 2.217-3.682 3.812-.88 1.594-1.328 3.41-1.348 5.254.02 1.845.37 3.612 1.04 5.206l-1.11 3.555 3.639-1.068c1.537.883 3.286 1.328 5.226 1.348 1.94-.02 3.776-.37 5.315-1.04 1.539-.672 2.8-1.634 3.78-2.885.981-1.25 1.479-2.708 1.499-4.273-.02-1.565-.37-3.12-1.04-4.566-.67-1.446-1.632-2.707-2.885-3.688-1.252-.981-2.71-1.479-4.273-1.499z"/></svg></a></li>
+                <li><a href="https://www.facebook.com/COSUP" class="social-link facebook-link" title="Visit us on Facebook"><svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 4.99 3.66 9.12 8.44 9.93v-7.04H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34v7.04C18.34 21.19 22 17.06 22 12.07z"/></svg></a></li>
+                <li><a href="#">16 Sites Across Tshwane</a></li>
+                <li><a href="#">Research Unit</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="theme-toggle.js"></script>
+    <script>
+    // Simple client-side validation and success feedback
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('contactSuccess');
+
+        form?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Basic validation
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const message = form.message.value.trim();
+            const consent = form.consent.checked;
+
+            if (!name || !email || !message || !consent) {
+                alert('Please complete all required fields and accept the consent box.');
+                return;
+            }
+
+            // Simulate submission (replace with real endpoint if available)
+            form.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
+            setTimeout(() => {
+                success.hidden = false;
+                form.reset();
+                form.querySelectorAll('input, textarea, button').forEach(el => el.disabled = false);
+            }, 700);
+        });
+    });
+    </script>
+</body>
+</html>
+
+
