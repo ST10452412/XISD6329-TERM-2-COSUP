@@ -61,9 +61,9 @@ header {
     align-items: center;
     padding: 15px 5%;
     box-shadow: 0 2px 5px #00000014;
-    position: sticky;
     top: 0;
-    z-index: 1000;
+    position: relative; /* Ensures z-index takes effect */
+    z-index: 10000; 
 }
 
 /* New Pure CSS Logo Styles */
@@ -108,6 +108,11 @@ nav a {
     font-weight: 500;
 }
 
+nav a.active {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
 .menu-open header nav {
     display: flex;
 }
@@ -124,13 +129,8 @@ nav a:hover {
 }
 
 .mobile-menu-items .mode-toggle,
-.mobile-menu-items .btn-app,
 .mobile-menu-items .hopeline-link {
     width: 100%;
-}
-
-.mobile-menu-items .btn-app {
-    justify-content: center;
 }
 
 .nav-actions {
@@ -181,15 +181,6 @@ nav a:hover {
     transform: translateY(5px);
 }
 
-.btn-app {
-    background-color: var(--primary-green);
-    color: var(--white);
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
 .btn-hopeline {
     background-color: var(--orange-alert);
     color: var(--white);
@@ -202,9 +193,6 @@ nav a:hover {
     gap: 8px;
 }
 
-.btn-app:hover, .btn-hopeline:hover {
-    opacity: 0.9;
-}
 .toggle-icon {
     display: inline-flex;
     width: 24px;
@@ -472,10 +460,6 @@ footer {
         align-items: stretch;
     }
 
-    .nav-actions .btn-app {
-        width: 100%;
-    }
-
     .nav-actions img.hopeline-image {
         width: 100%;
         height: auto;
@@ -559,7 +543,9 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
-
+.care-card {
+    cursor: pointer;
+}
 /* Individual Care Cards */
 .care-card {
     background-color: var(--surface-bg);
@@ -649,10 +635,12 @@ footer {
 
 #map {
     width: 100%;
-    height: 420px;
+    height: 500px;
     border-radius: 18px;
     margin-bottom: 32px;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 /* Contact form styles */
@@ -819,8 +807,9 @@ footer {
     .logo-main { font-size: 55px; }
     .logo-sub { font-size: 7px; }
     .hero-buttons { flex-direction: column; align-items: stretch; }
-    .btn-app, .btn-secondary { width: 100%; }
-    .btn-app, .btn-secondary, .btn-hopeline { padding: 12px 18px; }
+    .btn-secondary { width: 100%; }
+    .btn-secondary,
+    .btn-hopeline { padding: 12px 18px; }
     .stats-section { padding: 25px 3%; }
     .services-grid { gap: 24px; }
     #map { height: 350px; }
@@ -833,32 +822,3 @@ footer {
     .hero-buttons { gap: 10px; }
     .hero h1 { font-size: 2.3rem; }
 }
-
-.flowchart {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2px;
-    padding: 20px 8%;
-    max-width: 1400px;
-}
-
-.step {
-    background: var(--primary-green);
-    color: var(--white);
-    padding: 18px 22px;
-    border-radius: 12px;
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    box-shadow: none;
-}
-
-.wide { grid-column: span 2; }
-.small { min-height: 80px; }
-
-/* Hide decorative arrows when using boxed layout */
-.arrow { display: none; }
-
-
-
-

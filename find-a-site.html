@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COSUP - Community Oriented Substance Use Programme</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -17,16 +19,15 @@
             <span></span>
         </button>
         <nav>
-            <a href="index.html">Home</a>
+          <a href="index.html"  >Home</a>
             <a href="services.html">Services</a>
-            <a href="find-a-site.html">Find a Site</a>
+            <a href="find-a-site.html"class="active">Find A Site</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <div class="mobile-menu-items">
                 <button class="mode-toggle" aria-label="Toggle light/dark mode">
                     <span class="toggle-icon"></span>
                 </button>
-                <a href="#" class="btn-app">Get an App</a>
                 <a href="tel:0800611197" class="hopeline-link">
                     <img src="images/hopeline.png" class="hopeline-image">
                 </a>
@@ -37,7 +38,6 @@
           <button class="mode-toggle" aria-label="Toggle light/dark mode">
             <span class="toggle-icon"></span>
           </button>
-          <a href="#" class="btn-app">Get an App</a>
           <a href="tel:0800611197" >
             <img src="images/hopeline.png" class="hopeline-image">
           </a>
@@ -53,14 +53,15 @@
         <div id="map"></div>
 
         <section class="services-grid">
-            <article class="care-card">
+            <article class="care-card" onclick="openMap('https://www.google.com/maps/place/Zithobeni+Clinic/@-25.784175,28.7167017,17z/data=!3m1!4b1!4m6!3m5!1s0x1eeaad77f97e43d1:0x9af9ba4cbea9a0d3!8m2!3d-25.784175!4d28.7192766!16s%2Fg%2F1tj54wps')">
                 <span class="location-badge">01</span>
                 <h3>COSUP Bronkhorstspruit</h3>
                 <p>Zithobeni Clinic, Bronkhorstspruit</p>
-                <p class="card-meta">Tue & Thur · 09:30–14:00</p>
+                <p class="card-meta">Tue &amp; Thur · 09:30–14:00</p>
                 <p class="card-meta">076 560 1389</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">02</span>
                 <h3>COSUP Hammanskraal</h3>
                 <p>Mandisa Shiecka Clinic, Old Warmbaths Road</p>
@@ -68,6 +69,7 @@
                 <p class="card-meta">066 300 8338</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">03</span>
                 <h3>COSUP Sediba Hope Building-Bosman Street</h3>
                 <p>Main Centre · 173 Bosman Street, Pretoria</p>
@@ -75,6 +77,7 @@
                 <p class="card-meta">082 858 4304</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">04</span>
                 <h3>COSUP Daspoort Poli Clinic</h3>
                 <p>Cnr Market & Camp Street, Pretoria West</p>
@@ -82,6 +85,7 @@
                 <p class="card-meta">082 857 0922</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">05</span>
                 <h3>COSUP Attridgeville Clinic</h3>
                 <p>1A Mareka Street, Attridgeville</p>
@@ -89,6 +93,7 @@
                 <p class="card-meta">082 858 2450</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">06</span>
                 <h3>COSUP Laudium Community Health Centre</h3>
                 <p>405 Bengal Street, Laudium</p>
@@ -96,6 +101,7 @@
                 <p class="card-meta">081 725 2462</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">07</span>
                 <h3>COSUP Olievenhoutbosch Ext 23</h3>
                 <p>Cnr Imbono & Imbongolo Street</p>
@@ -103,6 +109,7 @@
                 <p class="card-meta">066 472 5740</p>
             </article>
             <article class="care-card">
+               
                 <span class="location-badge">08</span>
                 <h3>COSUP Winterveldt</h3>
                 <p>1/4 Cemetery Road, Slovo Gardens</p>
@@ -110,6 +117,7 @@
                 <p class="card-meta">071 573 5883</p>
             </article>
             <article class="care-card">
+            
                 <span class="location-badge">09</span>
                 <h3>COSUP Mamelodi Lusaka</h3>
                 <p>Cnr Millenyane & Ratshwene Street</p>
@@ -117,6 +125,7 @@
                 <p class="card-meta">082 858 2553 / 072 592 6754</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">10</span>
                 <h3>COSUP Mamelodi Ikageng (The Holy Bible Church)</h3>
                 <p>21882 Molokokolo Circle, Mamelodi (Holy Bible Church)</p>
@@ -124,6 +133,7 @@
                 <p class="card-meta">076 560 1389</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">11</span>
                 <h3>COSUP Mamelodi Regional Hospital</h3>
                 <p>Cnr Serapeng & Tsarnaya Road, Mamelodi</p>
@@ -131,6 +141,7 @@
                 <p class="card-meta">066 472 5580</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">12</span>
                 <h3>COSUP Eersterust Community Health Centre</h3>
                 <p>Cnr PS Fourie Drive & Hans Coverdale Road</p>
@@ -138,6 +149,7 @@
                 <p class="card-meta">082 941 6038</p>
             </article>
             <article class="care-card">
+               
                 <span class="location-badge">13</span>
                 <h3>COSUP Soshanguve Block V</h3>
                 <p>Elim Tabernacle Church, Inkanyezi Street</p>
@@ -145,13 +157,15 @@
                 <p class="card-meta">066 300 8338</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">14</span>
-                <h3>COSUP Soshanguve Block K PopUp Center>/h3>
+                <h3>COSUP Soshanguve Block K PopUp Center</h3>
                 <p>Cnr Aubrey Matlala & Tlou Street</p>
                 <p class="card-meta">Mon–Fri · 08:00–16:00</p>
                 <p class="card-meta">076 587 6770</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">15</span>
                 <h3>COSUP Soshanguve M17</h3>
                 <p>Dream Team Foundation, M17 Road, Soshanguve South</p>
@@ -159,6 +173,7 @@
                 <p class="card-meta">082 858 2563</p>
             </article>
             <article class="care-card">
+                
                 <span class="location-badge">16</span>
                 <h3>COSUP Garankuwa</h3>
                 <p>Reategile Centre, Stand 05030</p>
@@ -166,72 +181,11 @@
                 <p class="card-meta">079 321 4152</p>
             </article>
         </section>
+
+       
     </main>
 
-  <script>
-
-let map;
-let marker;
-
-function initMap() {
-
-    // Default location (Pretoria)
-    const defaultLocation = {
-        lat: -25.7479,
-        lng: 28.2293
-    };
-
-    // Create map
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: defaultLocation,
-        zoom: 14,
-    });
-
-    // Marker
-    marker = new google.maps.Marker({
-        position: defaultLocation,
-        map: map,
-        title: "You are here"
-    });
-
-    // Live user location
-    if (navigator.geolocation) {
-
-        navigator.geolocation.watchPosition(
-
-            (position) => {
-
-                const userLocation = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude,
-                };
-
-                marker.setPosition(userLocation);
-                map.setCenter(userLocation);
-
-            },
-
-            (error) => {
-                console.error(error);
-            },
-
-            {
-                enableHighAccuracy: true
-            }
-
-        );
-
-    }
-}
-
-</script>
-
-<script async
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaJ9slxTPpM-MjnJu4wO5GTZElm0KDQE0&callback=initMap">
-</script>
-
-
-    <footer>
+  <footer>
         <div class="footer-brand">
             <div class="logo-text" style="color: white;">COSUP</div>
             <p>Community Oriented Substance Use Programme. Serving Tshwane since 2015 across 16 sites. A partnership between the City of Tshwane and the University of Pretoria.</p>
@@ -270,8 +224,96 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaJ9slxTPpM-MjnJu4wO5GTZE
                   <li><a href="https://web.facebook.com/UPCOPCCOSUP/?_rdc=1&_rdr#" class="facebook-link">
                     <svg class="facebook-icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg> UP COPC COSUP</a></li>
                  </footer>
+   
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaJ9slxTPpM-MjnJu4wO5GTZElm0KDQE0&callback=initMap">
+</script>
+
+
 
     <script src="theme-toggle.js"></script>
+    <!-- Firebase & Leaflet Map Logic Bridge -->
+     <script>
+function openMap(url) {
+    window.open(url, '_blank', 'noopener,noreferrer');
+}
+</script>
+<!-- Firebase & Leaflet Map Logic Bridge -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCsysnkDG5UX6TgRnBV4MvVNzhILf5zA-o",
+        authDomain: "cosup-f7c09.firebaseapp.com",
+        databaseURL: "https://cosup-f7c09-default-rtdb.firebaseio.com",
+        projectId: "cosup-f7c09",
+        storageBucket: "cosup-f7c09.firebasestorage.app",
+        messagingSenderId: "153172635070",
+        appId: "1:153172635070:web:cf7957cab55071721f5def"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // Initialize Map
+    const map = L.map('map', { zoomControl: false }).setView([-25.7479, 28.2293], 10);
+
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+}).addTo(map);
+
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    // Fetch pins from Firebase
+    const sitesRef = ref(db, 'sites');
+
+    onValue(sitesRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+            const bounds = [];
+
+            Object.keys(data).forEach((siteKey) => {
+                const siteData = data[siteKey];
+
+                if (siteData && typeof siteData === 'object') {
+                    // Look through the keys inside this site (e.g. "COSUP Mamelodi Ikageng...")
+                    Object.keys(siteData).forEach((innerKey) => {
+                        const item = siteData[innerKey];
+
+                        // Case 1: latitude & longitude are nested inside clinic name sub-node (like in your screenshot)
+                        let lat = parseFloat(item?.latitude);
+                        let lng = parseFloat(item?.longitude);
+                        let siteName = innerKey;
+
+                        // Case 2: latitude & longitude are directly under siteKey
+                        if (isNaN(lat) || isNaN(lng)) {
+                            lat = parseFloat(siteData.latitude);
+                            lng = parseFloat(siteData.longitude);
+                            siteName = siteData.name || innerKey || siteKey;
+                        }
+
+                        // Plot pin if coordinates are valid numbers
+                        if (!isNaN(lat) && !isNaN(lng)) {
+                            const marker = L.marker([lat, lng]).addTo(map);
+                            marker.bindPopup(`
+                                <div style="font-family: sans-serif;">
+                                    <b style="color: #1b4332; font-size: 14px;">${siteName}</b><br>
+                                    <span style="color: #2d5a27;">COSUP Centre</span>
+                                </div>
+                            `);
+                            bounds.push([lat, lng]);
+                        }
+                    });
+                }
+            });
+
+            // Automatically zoom and fit all active pins on screen
+        
+        }
+    });
+</script>
 </body>
 </html>
 
